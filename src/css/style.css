@@ -1,0 +1,69 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.forca {
+    width: 400px;
+    height: 466px;
+    margin-left: 40px;
+}
+
+.start {
+    width: 200px;
+    height: 60px;
+    border-radius: 8px;
+    border: none;
+    margin-right: 70px;
+
+    cursor: pointer;
+
+    background: #27AE60;
+    color: #FFFFFF;
+
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+.container-inferior {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.teclado {
+    width: 700px;
+    height: 90px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.letra{
+    width: 40px;
+    height: 40px;
+
+    cursor: pointer;
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    color: #798A9F;
+    background: #9FAAB5;
+    border: 1px solid #7AA7C7;
+    border-radius: 3px;
+}
