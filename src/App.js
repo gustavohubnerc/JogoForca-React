@@ -4,20 +4,17 @@ import Letras from './components/Letras';
 import palavras from './palavras';
 
 export default function App() {
-  const [isEnabled, setIsEnabled] = useState(false);
-  const [palavra, setPalavra] = useState('');
-  const [arrayPalavra, setArrayPalavra] = useState([]);
-  const [palavraOculta, setPalavraOculta] = useState('');
 
-  function escolherPalavra() {
-    const randomIndex = Math.floor(Math.random() * palavras.length);
-    setPalavra(palavras[randomIndex]);
+  const [isEnabled, setIsEnabled] = useState(false);
+
+  function handleClick() {
+    setIsEnabled(true);
   }
 
   return (
     <>
-      <Jogo isEnabled={isEnabled} escolherPalavra={escolherPalavra} />
-      <Letras isEnabled={isEnabled} />
+      <Jogo setIsEnabled={setIsEnabled}/>
+      <Letras isEnabled={isEnabled}/>
     </>
   );
 }
