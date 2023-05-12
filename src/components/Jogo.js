@@ -13,13 +13,13 @@ export default function Jogo(props) {
 
   function handleClick() {
     props.setIsEnabled(true);
-}
+  }
 
   return (
     <div className="container">
-            <img className="forca" alt="forca0" src={forca0}/>
-            <button className="start" onClick={handleClick}>Escolher palavra</button>        
-        </div>
+        <img className="forca" alt="forca0" src={forca0}/>
+        <button className="start" onClick={handleClick}>Escolher palavra</button>
+    </div>
   );
 }
 
