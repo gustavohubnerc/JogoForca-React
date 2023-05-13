@@ -59,3 +59,21 @@
     border: 1px solid #7AA7C7;
     border-radius: 3px;
 }
+
+.palavra {
+
+    width: auto;
+    height: 68px;
+    margin-right: 300px;
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 68px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+}
