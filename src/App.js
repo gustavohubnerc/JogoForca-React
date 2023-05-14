@@ -32,8 +32,7 @@ export default function App() {
   } else if (todasLetrasDescobertas) {
     result = "green";
   }
-
-
+ 
   function escolherPalavra() {
     const indice = Math.floor(Math.random() * palavras.length);
     const palavra = palavras[indice];

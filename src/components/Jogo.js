@@ -5,10 +5,11 @@ export default function Jogo({onEscolherPalavra, setIsEnabled, indiceImagemForca
     onEscolherPalavra();
   }
 
+
   return (
     <div className="container">
-      <img className="forca" alt="forca" src={imagensForca[indiceImagemForca]} />
-      <button className="start" onClick={handleClick}>
+      <img data-test="game-image" className="forca" alt="forca" src={imagensForca[indiceImagemForca]} />
+      <button data-test="choose-word" className="start" onClick={handleClick}>
         Escolher palavra
       </button>
     </div>

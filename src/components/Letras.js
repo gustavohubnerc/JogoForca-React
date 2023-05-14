@@ -33,6 +33,7 @@ export default function Letras({isEnabled, letrasEscolhidas, palavraEscolhida, o
     <div className="teclado">
       {alfabeto.map((letra) => (
         <button
+          data-test="letter"
           key={letra}
           className="letra"
           disabled={
