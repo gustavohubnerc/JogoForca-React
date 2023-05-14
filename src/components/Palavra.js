@@ -1,7 +1,4 @@
-import React from 'react';
-
-export default function Palavra(props) {
-  const { palavra, letrasDescobertas } = props;
+export default function Palavra({ palavra, letrasDescobertas }) {
 
   const palavraExibida = palavra
     .split('')

@@ -1,6 +1,4 @@
-import React from 'react';
-
-export default function Letras(props) {
+export default function Letras({isEnabled, letrasEscolhidas, palavraEscolhida, onLetraEscolhida}) {
   const alfabeto = [
     'a',
     'b',
@@ -37,12 +35,12 @@ export default function Letras(props) {
           key={letra}
           className="letra"
           disabled={
-            !props.isEnabled ||
-            props.letrasEscolhidas.includes(letra) ||
-            (props.palavraEscolhida &&
-              !props.palavraEscolhida.includes(letra))
+            !isEnabled ||
+            letrasEscolhidas.includes(letra) ||
+            (palavraEscolhida &&
+              !palavraEscolhida.includes(letra))
           }
-          onClick={() => props.onLetraEscolhida(letra)}
+          onClick={() => onLetraEscolhida(letra)}
         >
           {letra}
         </button>
