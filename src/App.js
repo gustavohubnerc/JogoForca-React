@@ -13,26 +13,25 @@ import forca6 from './assets/forca6.png';
 
 const imagensForca = [forca0, forca1, forca2, forca3, forca4, forca5, forca6];
 
-
 export default function App() {
   const [isEnabled, setIsEnabled] = useState(false);
   const [palavraEscolhida, setPalavraEscolhida] = useState('');
   const [letrasPalavra, setLetrasPalavra] = useState([]);
   const [letrasDescobertas, setLetrasDescobertas] = useState([]);
-  let [indiceImagemForca, setIndiceImagemForca] = useState(0);
-  
+  const [indiceImagemForca, setIndiceImagemForca] = useState(0);
 
-  let result = "";
-  
-  const todasLetrasDescobertas = letrasPalavra.every(letra => letrasDescobertas.includes(letra));
+  let result = '';
 
-  
+  const todasLetrasDescobertas = letrasPalavra.every((letra) =>
+    letrasDescobertas.includes(letra)
+  );
+
   if (indiceImagemForca === 6) {
-    result = "red";
+    result = 'red';
   } else if (todasLetrasDescobertas) {
-    result = "green";
+    result = 'green';
   }
- 
+
   function escolherPalavra() {
     const indice = Math.floor(Math.random() * palavras.length);
     const palavra = palavras[indice];
@@ -43,10 +42,9 @@ export default function App() {
 
   function handleLetraEscolhida(letra) {
     console.log(letra);
-   if (!letrasPalavra.includes(letra)) {
-      setIndiceImagemForca(indiceImagemForca += 1);
-    } 
-    
+    if (!letrasPalavra.includes(letra)) {
+      setIndiceImagemForca(indiceImagemForca + 1);
+    }
 
     setLetrasDescobertas((letrasDescobertas) =>
       letrasDescobertas.concat(letra)
@@ -54,7 +52,7 @@ export default function App() {
   }
 
   console.log(letrasPalavra);
-  
+
   return (
     <>
       <Jogo
@@ -63,12 +61,17 @@ export default function App() {
         setIsEnabled={setIsEnabled}
         indiceImagemForca={indiceImagemForca}
       />
-      <Palavra result={result} palavra={palavraEscolhida} letrasDescobertas={letrasDescobertas} />
+      <Palavra
+        result={result}
+        palavra={palavraEscolhida}
+        letrasDescobertas={letrasDescobertas}
+      />
       <Letras
         isEnabled={isEnabled}
         letrasEscolhidas={letrasDescobertas}
         palavraEscolhida={letrasPalavra}
         onLetraEscolhida={handleLetraEscolhida}
+        corHabilitado="#E1ECF4"
       />
     </>
   );

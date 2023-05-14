@@ -86,3 +86,16 @@
 .palavra.green {
     color: green;
 }
+
+.letra-selecionada {
+    background-color: #E1ECF4;
+    color: #39739D;
+}
+
+.letra {
+    background-color: #9FAAB5;
+  }
+  
+  .letra:enabled {
+    background-color: #E1ECF4;
+  }
