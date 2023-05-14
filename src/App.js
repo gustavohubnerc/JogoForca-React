@@ -20,6 +20,13 @@ export default function App() {
   const [letrasPalavra, setLetrasPalavra] = useState([]);
   const [letrasDescobertas, setLetrasDescobertas] = useState([]);
   let [indiceImagemForca, setIndiceImagemForca] = useState(0);
+
+  let errado = "";
+  
+  
+  if(indiceImagemForca === 6) {
+    errado = "red";
+  }
   
 
   function escolherPalavra() {
@@ -53,10 +60,7 @@ export default function App() {
         setIsEnabled={setIsEnabled}
         indiceImagemForca={indiceImagemForca}
       />
-
-
-
-      <Palavra palavra={palavraEscolhida} letrasDescobertas={letrasDescobertas} />
+      <Palavra errado={errado} palavra={palavraEscolhida} letrasDescobertas={letrasDescobertas} />
       <Letras
         isEnabled={isEnabled}
         letrasEscolhidas={letrasDescobertas}

@@ -1,4 +1,4 @@
-export default function Palavra({ palavra, letrasDescobertas }) {
+export default function Palavra({ errado, palavra, letrasDescobertas }) {
 
   const palavraExibida = palavra
     .split('')
@@ -7,5 +7,5 @@ export default function Palavra({ palavra, letrasDescobertas }) {
     )
     .join(' ');
 
-  return <div className="palavra">{palavraExibida}</div>;
+  return <div className={`palavra ${errado}`}>{palavraExibida}</div>;
 }
