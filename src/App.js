@@ -22,9 +22,6 @@ export default function App() {
   let [indiceImagemForca, setIndiceImagemForca] = useState(0);
   
 
-  
-
-
   function escolherPalavra() {
     const indice = Math.floor(Math.random() * palavras.length);
     const palavra = palavras[indice];
@@ -33,9 +30,9 @@ export default function App() {
     setLetrasDescobertas([]);
   }
 
-  /* function handleLetraEscolhida(letra) {
+  function handleLetraEscolhida(letra) {
+    console.log(letra);
    if (!letrasPalavra.includes(letra)) {
-      //setIndiceImagemForca(indiceImagemForca += 1);
       setIndiceImagemForca(indiceImagemForca += 1);
     } 
     
@@ -43,17 +40,8 @@ export default function App() {
     setLetrasDescobertas((letrasDescobertas) =>
       letrasDescobertas.concat(letra)
     );
-  } */
-
-  function handleLetraEscolhida(letra) {
-    if (!letrasPalavra.includes(letra)) {
-      setIndiceImagemForca((indice) => indice + 1);
-    }
-  
-    setLetrasDescobertas((letrasDescobertas) =>
-      letrasDescobertas.concat(letra)
-    );
   }
+
   
   
 
