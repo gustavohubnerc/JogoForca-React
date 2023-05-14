@@ -8,5 +8,5 @@ export default function Palavra({ result, palavra, letrasDescobertas }) {
     .join(' ');
 
 
-  return <div className={`palavra ${result}`}>{palavraExibida}</div>;
+  return <div data-test="word" className={`palavra ${result}`}>{palavraExibida}</div>;
 }
