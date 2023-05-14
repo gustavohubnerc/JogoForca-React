@@ -20,14 +20,19 @@ export default function App() {
   const [letrasPalavra, setLetrasPalavra] = useState([]);
   const [letrasDescobertas, setLetrasDescobertas] = useState([]);
   let [indiceImagemForca, setIndiceImagemForca] = useState(0);
+  
 
-  let errado = "";
+  let result = "";
   
+  const todasLetrasDescobertas = letrasPalavra.every(letra => letrasDescobertas.includes(letra));
+
   
-  if(indiceImagemForca === 6) {
-    errado = "red";
+  if (indiceImagemForca === 6) {
+    result = "red";
+  } else if (todasLetrasDescobertas) {
+    result = "green";
   }
-  
+
 
   function escolherPalavra() {
     const indice = Math.floor(Math.random() * palavras.length);
@@ -49,9 +54,8 @@ export default function App() {
     );
   }
 
+  console.log(letrasPalavra);
   
-  
-
   return (
     <>
       <Jogo
@@ -60,7 +64,7 @@ export default function App() {
         setIsEnabled={setIsEnabled}
         indiceImagemForca={indiceImagemForca}
       />
-      <Palavra errado={errado} palavra={palavraEscolhida} letrasDescobertas={letrasDescobertas} />
+      <Palavra result={result} palavra={palavraEscolhida} letrasDescobertas={letrasDescobertas} />
       <Letras
         isEnabled={isEnabled}
         letrasEscolhidas={letrasDescobertas}

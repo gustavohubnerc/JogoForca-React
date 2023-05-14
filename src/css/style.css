@@ -78,10 +78,11 @@
     color: #000000;
 }
 
-.red {
+
+.palavra.red {
     color: red;
 }
 
-.green {
+.palavra.green {
     color: green;
 }
