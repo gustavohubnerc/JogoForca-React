@@ -61,6 +61,9 @@ export default function App() {
         onEscolherPalavra={escolherPalavra}
         setIsEnabled={setIsEnabled}
         indiceImagemForca={indiceImagemForca}
+        setIndiceImagemForca={setIndiceImagemForca}
+        setLetrasDescobertas={setLetrasDescobertas}
+        
       />
       <Palavra
         result={result}

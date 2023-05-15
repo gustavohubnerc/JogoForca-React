@@ -1,7 +1,10 @@
-export default function Jogo({onEscolherPalavra, setIsEnabled, indiceImagemForca, imagensForca}) {
+export default function Jogo({onEscolherPalavra, setIsEnabled, indiceImagemForca, imagensForca, setLetrasDescobertas,
+  setIndiceImagemForca,}) {
 
   function handleClick() {
     setIsEnabled(true);
+    setLetrasDescobertas([]);
+    setIndiceImagemForca(0);
     onEscolherPalavra();
   }
 
