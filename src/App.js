@@ -72,6 +72,7 @@ export default function App() {
         palavraEscolhida={letrasPalavra}
         onLetraEscolhida={handleLetraEscolhida}
         corHabilitado="#E1ECF4"
+        result={result}
       />
     </>
   );

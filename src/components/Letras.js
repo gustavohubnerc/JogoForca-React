@@ -1,4 +1,4 @@
-export default function Letras({isEnabled, letrasEscolhidas, palavraEscolhida, onLetraEscolhida}) {
+export default function Letras({isEnabled, letrasEscolhidas, palavraEscolhida, onLetraEscolhida, result}) {
   
   const alfabeto = [
     'a',
@@ -38,7 +38,8 @@ export default function Letras({isEnabled, letrasEscolhidas, palavraEscolhida, o
           className="letra"
           disabled={
             !isEnabled ||
-            letrasEscolhidas.includes(letra)
+            letrasEscolhidas.includes(letra) ||
+            result !== ''
           }
           onClick={() => onLetraEscolhida(letra)}
         >
