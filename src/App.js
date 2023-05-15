@@ -32,6 +32,7 @@ export default function App() {
     result = 'green';
   }
 
+
   function escolherPalavra() {
     const indice = Math.floor(Math.random() * palavras.length);
     const palavra = palavras[indice];
